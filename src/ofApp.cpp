@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /*
 To do
@@ -8,6 +9,8 @@ dilate de openCV
  
  */
 
+=======
+>>>>>>> 4794cc98c47558fdbaae5953e62c1f29dd3d32ce
 #include "ofApp.h"
 
 
@@ -144,8 +147,13 @@ void ofApp::draw() {
     
 	reportStream << "press p to switch between images and point cloud, rotate the point cloud with the mouse" << endl
 	<< "using opencv threshold = " << bThreshWithOpenCV <<" (press spacebar)" << endl
+<<<<<<< HEAD
 	<< "set near threshold " << nearThreshold << " (press: k j)" << endl
 	<< "set far threshold " << farThreshold << " (press: , .) num blobs found " << contourFinder.nBlobs
+=======
+	<< "set near threshold " << nearThreshold << " (press: + -)" << endl
+	<< "set far threshold " << farThreshold << " (press: < >) num blobs found " << contourFinder.nBlobs
+>>>>>>> 4794cc98c47558fdbaae5953e62c1f29dd3d32ce
 	<< ", fps: " << ofGetFrameRate() << endl
 	<< "press c to close the connection and o to open it again, connection is: " << kinect.isConnected() << endl;
 
@@ -216,14 +224,23 @@ void ofApp::keyPressed (int key) {
 			if (farThreshold < 0) farThreshold = 0;
 			break;
 			
+<<<<<<< HEAD
 		case 'k':
 //		case '*':
+=======
+		case '+':
+		case '=':
+>>>>>>> 4794cc98c47558fdbaae5953e62c1f29dd3d32ce
 			nearThreshold ++;
 			if (nearThreshold > 255) nearThreshold = 255;
 			break;
 			
+<<<<<<< HEAD
 		case 'j':
   //      case '_':
+=======
+		case '-':
+>>>>>>> 4794cc98c47558fdbaae5953e62c1f29dd3d32ce
 			nearThreshold --;
 			if (nearThreshold < 0) nearThreshold = 0;
 			break;
